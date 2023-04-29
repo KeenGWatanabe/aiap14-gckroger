@@ -3,7 +3,7 @@
 
 import numpy as np
 import pandas as pd
-
+import sqlite as sql
 
 
 from ml_module.eda_preprocessing import eda_preprocessing
