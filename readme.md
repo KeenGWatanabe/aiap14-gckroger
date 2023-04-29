@@ -1,7 +1,7 @@
 ## Task 1 - Exploratory Data Analysis
 df
 ## Overview of Submitted folder
-``
+```
 ├── .github
 ├── src
 │   └── (python files constituting the end-to-end ML pipeline in py.fomrat)
@@ -44,8 +44,6 @@ Paste the following command on the bash terminal to run the machine learning pro
 ./run.sh
 ```
 
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+
 
 
