@@ -10,7 +10,7 @@ df = pd.read_csv('data/fishing.csv', index_col = 0)
 #check data type of table
 df.dtypes
 df.query('Rainfall >= 10')
-
+print(df)
 #create boolean column for 60% humidity
 df['60humid'] = np.where(df['Humidity9am'] >= 60, 1,0)
 
@@ -19,6 +19,9 @@ df['highcloud'] = np.where(df['Cloud9am'] >= 7, 1,0)
 
 #index column
 df['count'] = 1
+
+#assigning pivot table values for probability calculation
+#assigning pivot table values for probability calculation
 
 #create probability dataframe from above
 df = df[['60humid', 'highcloud','count']]
@@ -29,11 +32,7 @@ dfl = pd.pivot_table(df, values='count', index=['60humid'], columns=['highcloud'
 
 #print pivot table
 print(dfl)
-
-#assigning pivot table values for probability calculation
-A1 = dfl.loc[[0],[0]]
-dtype: A1
-#B1 = dfl.loc[[0],[1]]
+print(dfl.info())
 
 #C1 = dfl.loc[[1],[0]]
 
