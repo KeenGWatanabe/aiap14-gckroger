@@ -10,7 +10,7 @@ df = pd.read_csv('data/fishing.csv', index_col = 0)
 #check data type of table
 df.dtypes
 df.query('Rainfall >= 10')
-print(df)
+#print(df)
 #create boolean column for 60% humidity
 df['60humid'] = np.where(df['Humidity9am'] >= 60, 1,0)
 
@@ -20,7 +20,6 @@ df['highcloud'] = np.where(df['Cloud9am'] >= 7, 1,0)
 #index column
 df['count'] = 1
 
-#assigning pivot table values for probability calculation
 #assigning pivot table values for probability calculation
 
 #create probability dataframe from above
@@ -32,18 +31,19 @@ dfl = pd.pivot_table(df, values='count', index=['60humid'], columns=['highcloud'
 
 #print pivot table
 print(dfl)
-print(dfl.info())
 
-#C1 = dfl.loc[[1],[0]]
 
-#D1 = dfl.loc[[1],[1]]
-
+A = dfl.values[0,0]
+B = dfl.values[0,1]
+C = dfl.values[1,0]
+D = dfl.values[1,1]
+print("A=",A,"B=",B,"C=",C,"D=",D)
 #defining PA, PB, PandB
-#PA = (B1+D1)/(A1+B1+C1+D1)
+PA = (C+D)/(A+B+C+D)
 #print(PA)
-#PB = (C1+B1)/(A1+B1+C1+D1)
-#PandB = D1/(A1+B1+C1+D1)
-#result = PandB/PB
-#print(result)
+PB = (B+D)/(A+B+C+D)
+PAB = D/(A+B+C+D)
+result = PAB/PB
+print(round(result*100,2), "percent probability")
 
 

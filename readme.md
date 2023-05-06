@@ -1,5 +1,5 @@
 Full Name: Goh Chee Keen Roger
-email: rgerweb@gmail.com
+email: mckeenweb@gmail.com
 ## Task 1 - Exploratory Data Analysis
 ## Summary of eda.ipynb
 Accessing fishing.db file; 
