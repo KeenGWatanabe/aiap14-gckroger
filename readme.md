@@ -1,5 +1,4 @@
-Full Name: Goh Chee Keen Roger
-email: mckeenweb@gmail.com
+This version is for self practice only, not aiap
 ## Task 1 - Exploratory Data Analysis
 ## Summary of eda.ipynb
 Accessing fishing.db file; 
